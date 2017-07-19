@@ -48,7 +48,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 
         ivImage.setImageResource(0);
 
-        TextView tvTitle = (TextView)convertView.findViewById(R.id.tvTtile);
+        TextView tvTitle = (TextView)convertView.findViewById(R.id.tvTitle);
         TextView tvOverview = (TextView)convertView.findViewById(R.id.tvOverview);
 
         //Populate the data
@@ -57,6 +57,9 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         tvOverview.setText(movie.getOverview());
 
         Picasso.with(getContext()).load(movie.getPosterPath()).into(ivImage);
+        //Picasso.with(getContext()).load(movie.getPosterPath()).resize(250, 0).into(ivImage);
+        Picasso.with(getContext()).load(movie.getPosterPath()).resize(250, 250).
+                centerCrop().into(ivImage);
 
         //return the view
 

@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import cz.msebera.android.httpclient.client.cache.Resource;
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 /**
@@ -34,6 +35,12 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
     public MovieArrayAdapter(Context context, List<Movie> movies){
 
         super(context, android.R.layout.simple_list_item_1, movies);
+
+    }
+    Resource movie_placeholder2;
+
+    public Resource getMovie_placeholder() {
+        return movie_placeholder2;
     }
 
     //@NonNull
@@ -96,7 +103,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         //tvTitle.setText(movie.getOriginalTitle());
         //tvOverview.setText(movie.getOverview());
         Picasso.with(getContext()).load(movie.getPosterPath()).fit().centerCrop()
-                .placeholder(R.drawable.movie_placeholder)
+                .placeholder(R.drawable.movie_placeholder2)
                 .error(R.drawable.error_placeholder)
                 .into(ivImage);
         Picasso.with(getContext()).load(movie.getPosterPath()).into(ivImage);
@@ -105,7 +112,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         Picasso.with(getContext()).load(movie.getPosterPath()).resize(250, 250).
                 centerCrop().into(ivImage);
         Picasso.with(getContext()).load(movie.getPosterPath())
-                .transform(new RoundedCornersTransformation(20, 20)).into((ivImage));
+                .transform(new RoundedCornersTransformation(20, 20)).placeholder(R.drawable.movie_placeholder2).into((ivImage));
        //
 
         //return the view

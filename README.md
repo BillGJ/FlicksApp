@@ -45,6 +45,13 @@ Here's a walkthrough of implemented user stories for my different versions :
 <br/>
 <br/>
 <img src='http://i.imgur.com/Ljufzcy.gif' title='My Flickster App' width='' alt='Video Walkthrough' />
+<br/>
+<br/>
+<img src='http://i.imgur.com/ldLsZvW.gif' title='My Flickster App' width='' alt='Video Walkthrough' />
+<br/>
+<br/>
+<img src='http://i.imgur.com/BnvcyPB.gif' title='My Flickster App' width='' alt='Video Walkthrough' />
+
 
 
 
